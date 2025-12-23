@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>BagSphere | Premium Bags</title>
+  <title>BagSphere | Premium Bags & Luggage</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="header">
-  <img src="Images/logo.png" class="logo">
+  <img src="Images/logo.png" alt="BagSphere Logo" class="logo">
   <p class="tagline">Trust • Style • Durability</p>
-
   <nav class="nav">
     <a href="index.html">Home</a>
     <a href="products.html">Products</a>
@@ -19,44 +21,64 @@
   </nav>
 </header>
 
+<!-- CONTACT BAR -->
+<div class="contact-bar">
+  <a href="tel:+918777438644" class="call-btn">📞 Bulk Orders: +91 87774 38644</a>
+  <a href="https://wa.me/916291083811" target="_blank" class="wa-btn">
+    <img src="Images/whatsapp.png" alt="WhatsApp"> Helpline Chat
+  </a>
+</div>
+
+<!-- HERO -->
 <section class="hero">
-  <h2>Premium Bags & Luggage</h2>
-  <p>Built for every journey</p>
-</section>
-
-<section class="products">
-  <h3 class="section-title">Best Sellers</h3>
-
-  <div class="product-grid">
-
-    <a href="products.html" class="product-card">
-      <img src="Images/suitcase.jpg">
-      <h4>Hard Shell Suitcase</h4>
-      <span>₹2,999</span>
-    </a>
-
-    <a href="products.html" class="product-card">
-      <img src="Images/backpack1.jpg">
-      <h4>Adventure Backpack</h4>
-      <span>₹689</span>
-    </a>
-
-    <a href="products.html" class="product-card">
-      <img src="Images/backpack2.jpg">
-      <h4>Urban Backpack</h4>
-      <span>₹789</span>
-    </a>
-
+  <img src="Images/banner.jpg" alt="Hero Banner">
+  <div class="hero-text">
+    <h1>Premium Bags & Luggage<br>Built for Every Journey</h1>
+    <p>Durable. Stylish. Trusted by modern travelers.</p>
+    <a href="#products" class="btn">Explore Collection</a>
   </div>
 </section>
 
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="suitcase">Suitcase</button>
+    <button class="filter-btn" data-filter="backpack">Backpack</button>
+  </div>
+
+  <div class="product-grid">
+    <a href="product-suitcase.html" class="product-card" data-category="suitcase">
+      <div class="skeleton-img"></div>
+      <h4>Hard Shell Suitcase</h4>
+      <span>₹2,999</span>
+    </a>
+    <a href="product-backpack1.html" class="product-card" data-category="backpack">
+      <div class="skeleton-img"></div>
+      <h4>Adventure Backpack</h4>
+      <span>₹689</span>
+    </a>
+    <a href="product-backpack2.html" class="product-card" data-category="backpack">
+      <div class="skeleton-img"></div>
+      <h4>Urban Backpack</h4>
+      <span>₹789</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
-  <p>📞 Bulk: +91 87774 38644</p>
-  <p>💬 WhatsApp: +91 62910 83811</p>
+  <p><strong>BagSphere</strong></p>
+  <p>📦 Bulk Contact: <a href="tel:+918777438644">+91 87774 38644</a></p>
+  <p>💬 WhatsApp Helpline: <a href="https://wa.me/916291083811" target="_blank">+91 62910 83811</a></p>
   <p>© 2025 BagSphere</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/916291083811">💬</a>
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/916291083811" class="whatsapp-float" target="_blank">
+  <img src="Images/whatsapp.png" alt="WhatsApp">
+</a>
 
+<script src="script.js"></script>
 </body>
 </html>
