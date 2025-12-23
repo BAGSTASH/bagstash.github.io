@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>BagSphere</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>BagSphere | Premium Bags</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2563eb">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -12,43 +17,72 @@
 <header class="header">
   <img src="Images/logo.png" class="logo">
   <p class="tagline">Trust • Style • Durability</p>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 </header>
 
+<!-- CONTACT BAR -->
 <div class="contact-bar">
-  <a class="call-btn" href="tel:+918777438644">📞 Bulk: 87774 38644</a>
-  <a class="wa-btn" href="https://wa.me/916291083811">💬 Helpline</a>
+  <a href="tel:+918777438644" class="call-btn">📞 Bulk: +91 87774 38644</a>
+  <a href="https://wa.me/916291083811" class="wa-btn">💬 WhatsApp</a>
 </div>
 
-<section class="hero">
-  <h2>Premium Bags & Luggage</h2>
-  <a class="btn" href="products.html">Explore Products</a>
-</section>
+<!-- FILTER -->
+<div class="filter-bar">
+  <button onclick="filterProducts('all')">All</button>
+  <button onclick="filterProducts('suitcase')">Suitcase</button>
+  <button onclick="filterProducts('backpack')">Backpack</button>
+</div>
 
-<section class="products">
-  <h3 class="section-title">Best Sellers</h3>
+<!-- PRODUCTS -->
+<section class="products" id="products">
 
-  <div class="product-grid reveal">
-    <a href="product-suitcase.html" class="product-card">
+  <!-- SKELETON -->
+  <div class="skeleton-grid" id="skeleton">
+    <div class="skeleton-card"></div>
+    <div class="skeleton-card"></div>
+    <div class="skeleton-card"></div>
+  </div>
+
+  <!-- REAL PRODUCTS -->
+  <div class="product-grid hidden" id="productGrid">
+    <a class="product-card suitcase" href="product-suitcase.html">
       <img src="Images/suitcase.jpg">
       <h4>Hard Shell Suitcase</h4>
       <span>₹2,999</span>
     </a>
-    <a href="product-backpack1.html" class="product-card">
+
+    <a class="product-card backpack" href="product-backpack1.html">
       <img src="Images/backpack1.jpg">
       <h4>Adventure Backpack</h4>
       <span>₹689</span>
     </a>
+
+    <a class="product-card backpack" href="product-backpack2.html">
+      <img src="Images/backpack2.jpg">
+      <h4>Urban Backpack</h4>
+      <span>₹789</span>
+    </a>
   </div>
+
 </section>
+
+<!-- INSTALL POPUP -->
+<div class="install-popup" id="installPopup">
+  <p>📲 Install BagSphere App?</p>
+  <button id="installBtn">Install</button>
+  <button onclick="closeInstall()">Later</button>
+</div>
 
 <footer class="footer">
   <p>© 2025 BagSphere</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/916291083811">
-  <img src="Images/whatsapp.png">
-</a>
-
 <script src="script.js"></script>
+
 </body>
 </html>
